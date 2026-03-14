@@ -12,6 +12,10 @@ qt_add_executable(appNomos
     src/main.cpp
 
     src/database/DatabaseManager.cpp
+    src/database/StudentDao.cpp
+    src/database/StudentDao.h
+
+    src/dto/Student.h
 )
 
 qt_add_qml_module(appNomos
