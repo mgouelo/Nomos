@@ -34,6 +34,10 @@ qt_add_qml_module(appNomos
     URI Nomos
     QML_FILES
         qml/Main.qml
+
+        qml/views/HomeView.qml
+
+        qml/components/NomosButton.qml
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
