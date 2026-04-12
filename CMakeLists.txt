@@ -16,9 +16,18 @@ qt_add_executable(appNomos
     src/database/StudentDao.cpp
     src/database/ScenarioDao.h
     src/database/ScenarioDao.cpp
+    src/database/ClassroomDao.h
+    src/database/ClassroomDao.cpp
+    src/database/AllocationDao.h
+    src/database/AllocationDao.cpp
+    src/database/AffinityDao.h
+    src/database/AffinityDao.cpp
 
     src/dto/Student.h
     src/dto/Scenario.h
+    src/dto/Classroom.h
+    src/dto/Allocation.h
+    src/dto/Affinity.h
 )
 
 qt_add_qml_module(appNomos
