@@ -11,6 +11,7 @@ qt_standard_project_setup(REQUIRES 6.8)
 qt_add_executable(appNomos
     src/main.cpp
 
+    src/database/DatabaseManager.h
     src/database/DatabaseManager.cpp
     src/database/StudentDao.h
     src/database/StudentDao.cpp
@@ -28,6 +29,9 @@ qt_add_executable(appNomos
     src/dto/Classroom.h
     src/dto/Allocation.h
     src/dto/Affinity.h
+
+    src/controller/StudentController.h
+    src/controller/StudentController.cpp
 )
 
 qt_add_qml_module(appNomos

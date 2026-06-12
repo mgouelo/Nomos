@@ -5,7 +5,7 @@
 #include <QVariant>
 #include <QDebug>
 
-// Constructor
+// constructeur
 StudentDao::StudentDao() {
 
 }
@@ -27,9 +27,9 @@ bool StudentDao::insertStudent(const Student& student) {
     query.addBindValue(student.behavior_level);
     query.addBindValue(student.autonomy_level);
 
-    // execution and error verification
+    // exécution et vérification d'erreur
     if (!query.exec()) {
-        qWarning() << "ERROR StudentDAO.cpp : error while adding a new student" << query.lastError().text();
+        qWarning() << "ERROR StudentDAO.cpp : error while adding a new student - " << query.lastError().text();
         return false;
     }
     return true;
@@ -54,7 +54,7 @@ QList<Student> StudentDao::getAllStudents() const {
         s.behavior_level = query.value(6).toInt();
         s.autonomy_level = query.value(7).toInt();
 
-        studentList.append(s); // add student to the list
+        studentList.append(s); // ajoute l'élève à la liste
     }
 
     return studentList;
@@ -64,7 +64,7 @@ bool StudentDao::deleteAllStudents() {
     QSqlQuery query;
 
     if (!query.exec("DELETE FROM student")) {
-        qWarning() << "ERROR StudentDAO.cpp : error while deleting all students" << query.lastError().text();
+        qWarning() << "ERROR StudentDAO.cpp : error while deleting all students - " << query.lastError().text();
         return false;
     }
     return true;
