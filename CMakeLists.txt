@@ -32,6 +32,9 @@ qt_add_executable(appNomos
 
     src/controller/StudentController.h
     src/controller/StudentController.cpp
+
+    src/model/StudentModel.h
+    src/model/StudentModel.cpp
 )
 
 qt_add_qml_module(appNomos

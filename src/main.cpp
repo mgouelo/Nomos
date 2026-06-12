@@ -1,8 +1,10 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
 #include <QQmlContext>
+
 #include "database/DatabaseManager.h"
 #include "controller/StudentController.h"
+#include "model/StudentModel.h"
 
 int main(int argc, char *argv[])
 {
@@ -13,8 +15,10 @@ int main(int argc, char *argv[])
     QQmlApplicationEngine engine;
 
     StudentController studentController;
-
     engine.rootContext()->setContextProperty("studentController", &studentController);
+
+    StudentModel studentModel;
+    engine.rootContext()->setContextProperty("studentModel", &studentModel);
 
     QObject::connect(
         &engine,
